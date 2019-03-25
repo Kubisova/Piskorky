@@ -12,14 +12,23 @@ namespace Piskorky
 {
     public partial class FrmAddNewGame : Form
     {
-        public FrmAddNewGame()
+        public FrmGame FrmGame { get; set; }
+
+        public FrmAddNewGame(FrmGame frmgame)
         {
             InitializeComponent();
+            FrmGame = frmgame;
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-
+            {
+                var rows = int.Parse(txtDimensions.Text);
+                var cols = int.Parse(txtDimensions.Text);
+                var signs = int.Parse(txtNumberOfSigns.Text);
+                FrmGame.StartGame(rows, cols, signs);
+                Close();
+            }
         }
     }
 }

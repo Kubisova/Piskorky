@@ -35,12 +35,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblZnacka1 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.btnOK = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.txtDimensions = new System.Windows.Forms.TextBox();
+            this.txtNumberOfSigns = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,51 +101,6 @@
             this.lbl.TabIndex = 12;
             this.lbl.Text = "Značka pre 2. hráča";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(180, 26);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDown1.TabIndex = 13;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(180, 57);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(49, 20);
-            this.numericUpDown3.TabIndex = 15;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
             // numericUpDown4
             // 
             this.numericUpDown4.Location = new System.Drawing.Point(180, 90);
@@ -179,16 +132,31 @@
             this.btnOK.TabIndex = 17;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // txtDimensions
+            // 
+            this.txtDimensions.Location = new System.Drawing.Point(180, 28);
+            this.txtDimensions.Name = "txtDimensions";
+            this.txtDimensions.Size = new System.Drawing.Size(49, 20);
+            this.txtDimensions.TabIndex = 18;
+            // 
+            // txtNumberOfSigns
+            // 
+            this.txtNumberOfSigns.Location = new System.Drawing.Point(180, 59);
+            this.txtNumberOfSigns.Name = "txtNumberOfSigns";
+            this.txtNumberOfSigns.Size = new System.Drawing.Size(49, 20);
+            this.txtNumberOfSigns.TabIndex = 19;
             // 
             // FrmAddNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 352);
+            this.Controls.Add(this.txtNumberOfSigns);
+            this.Controls.Add(this.txtDimensions);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.lblZnacka1);
             this.Controls.Add(this.textBox1);
@@ -198,8 +166,6 @@
             this.Controls.Add(this.lblDimensions);
             this.Name = "FrmAddNewGame";
             this.Text = "Pridaj novú hru";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -215,9 +181,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblZnacka1;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.TextBox txtDimensions;
+        private System.Windows.Forms.TextBox txtNumberOfSigns;
     }
 }
